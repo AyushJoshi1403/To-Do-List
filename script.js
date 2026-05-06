@@ -23,7 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function renderTask(task) {
-    console.log(task);
+    const li = document.createElement("li");
+    li.setAttribute("data-id", task.id);
+    li.innerHTML = `
+    <span>${task.text}</span>
+    <button>delete</button>
+    `;
   }
 
   function saveTasks() {
